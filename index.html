@@ -14,6 +14,29 @@
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 </head>
 
+<a href="javascript:openSite()">Click to go to a random site</a>
+<script>
+var links = [
+              "youtube.com",
+              "reddit.com",
+              "apple.com"]
+
+           var openSite = function() {
+              // get a random number between 0 and the number of links
+              var randIdx = Math.random() * links.length;
+              // round it, so it can be used as array index
+              randIdx = parseInt(randIdx, 10);
+              // construct the link to be opened
+              var link = 'http://' + links[randIdx];
+
+              var openSite = function( url ) {
+            		window.open( url );
+            	};
+
+     return link;
+    };
+</script>
+
 <div id="container center">
   <div id="header id="index-banner"">
      <div class="row center">
